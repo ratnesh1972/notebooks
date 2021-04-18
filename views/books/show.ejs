@@ -1,0 +1,5 @@
+<%- layout('./layouts/base.ejs')  %>
+<h1>This is show page, we will show all books here.</h1>
+<% for(book of books)  {%>
+<p><%= book.title %> </p>
+<% } %>

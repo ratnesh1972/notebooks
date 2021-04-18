@@ -1,0 +1,26 @@
+<%- layout('./layouts/base.ejs')  %>
+<h1>Hello, this is page for adding new book</h1>
+<form action="/books/new" method="POST">
+    <div class="mb-3">
+        <label for="title" class="form-label">Book Title</label>
+        <input type="text" class="form-control" id="title" name="book[title]" placeholder="Enter book title" autofocus>
+    </div>
+    <div class="mb-3">
+        <label for="image" class="form-label">Book Image</label>
+        <input type="text" class="form-control" id="image" name="book[image]" placeholder="Enter image URL">
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea type="textarea" class="form-control" id="description" name="book[description]"
+            placeholder="Enter description"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="quote" class="form-label">Favourite quote</label>
+        <input type="text" class="form-control" id="quote" name="book[quote]" placeholder="Your favourtie quote">
+    </div>
+    <div class="mb-3">
+        <label for="rating" class="form-label">Rating</label>
+        <input type="range" class="form-range" min="0" max="5" id="rating" name="book[rating]">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
